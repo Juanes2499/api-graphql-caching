@@ -11,7 +11,7 @@ var root = {
     },
     restaurants: async (args) => {
         const restaurantData = await restaurantModel.find({});
-        const result = restaurantData;
+        let result = restaurantData;
         if (args.type) {
             result = result.filter(restaurant => restaurant.type === args.type);
         }
