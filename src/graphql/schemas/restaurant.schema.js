@@ -4,11 +4,11 @@ var { buildSchema } = require('graphql');
 var schema = buildSchema(`
     type Query {
       hello: String
-      restaurant(id: Int!): Restaurant
+      restaurant(id: String): Restaurant
       restaurants(type: String, stars: Int): [Restaurant]
     },
     type Restaurant {
-      id: Int
+      id: String
       name: String
       type: String
       map: String
