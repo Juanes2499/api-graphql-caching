@@ -4,6 +4,7 @@ const app = express();
 const morgan = require('morgan');
 // const bodyParser = require('body-parser');
 const routers = require('./routes/index');
+const graphQLs = require('./graphql/index');
 const mongoose = require('mongoose');
 
 // BD
@@ -22,7 +23,8 @@ app.use(express.urlencoded({extended: false})) //Allows the server to understand
 app.use(express.json()); //Allows the server to receive JSON formats and understand them
 
 // Routers
-app.use('/api',routers);
+app.use('/api', routers);
+app.use('/graphql', graphQLs);
 
 // Starting server
 app.listen(app.get('port'), () => {

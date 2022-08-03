@@ -8,5 +8,4 @@ router.get('/:restaurantId', getDataById);
 router.put('/:restaurantId', updateData);
 router.delete('/:restaurantId', deleteData);
 
-
 module.exports = router;
