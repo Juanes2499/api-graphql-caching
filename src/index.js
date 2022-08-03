@@ -1,11 +1,19 @@
 require("dotenv").config();
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const morgan = require('morgan');
 // const bodyParser = require('body-parser');
 const routers = require('./routes/index');
 const graphQLs = require('./graphql/index');
 const mongoose = require('mongoose');
+
+// cors
+const corsOptions = {
+	origin: '*',
+	optionsSuccessStatus: 200
+};
+app.use(cors(corsOptions));
 
 // BD
 mongoose.Promise = global.Promise;
