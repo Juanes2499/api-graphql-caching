@@ -1,9 +1,9 @@
 
 const express = require('express');
 const routes = express();
-const restaurantRoute = require('./restaurant.route');
+const crediCardRoute = require('./crediCard.route');
 
-routes.use('/restaurant', restaurantRoute);
+routes.use('/crediCard', crediCardRoute);
 
 module.exports = routes;
 
