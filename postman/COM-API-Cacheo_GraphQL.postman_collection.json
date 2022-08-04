@@ -1,121 +1,126 @@
 {
 	"info": {
-		"_postman_id": "ecefe30e-e20e-46fd-b469-7418e5d1cf7b",
-		"name": "COM-API-Cacheo_GraphQL",
+		"_postman_id": "19f38700-3128-4134-aca7-0e629ff8b29b",
+		"name": "COMUNIDADES",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "21376888"
 	},
 	"item": [
 		{
-			"name": "Crear Restaurante",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"id\": 8,\r\n    \"name\": \"Junoon\",\r\n    \"type\": \"Indian\",\r\n    \"stars\": 1,\r\n    \"map\": \"https://goo.gl/maps/MCqxKiApEQS2\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+			"name": "API-Cacheo_GraphQL",
+			"item": [
+				{
+					"name": "Crear CrediCard",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 8,\r\n    \"name\": \"Junoon\",\r\n    \"type\": \"Indian\",\r\n    \"stars\": 1,\r\n    \"map\": \"https://goo.gl/maps/MCqxKiApEQS2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{COM_API_CACHEO_GRAPHQL_HOST}}/api/restaurant",
+							"host": [
+								"{{COM_API_CACHEO_GRAPHQL_HOST}}"
+							],
+							"path": [
+								"api",
+								"restaurant"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "{{COM_API_CACHEO_GRAPHQL_HOST}}/api/restaurant",
-					"host": [
-						"{{COM_API_CACHEO_GRAPHQL_HOST}}"
-					],
-					"path": [
-						"api",
-						"restaurant"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Actualizar Restaurante por ID",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"id\": 8,\r\n    \"name\": \"Junoon\",\r\n    \"type\": \"Indian\",\r\n    \"stars\": 1,\r\n    \"map\": \"https://goo.gl/maps/MCqxKiApEQS2\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+				{
+					"name": "Actualizar CrediCard por ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 8,\r\n    \"name\": \"Junoon\",\r\n    \"type\": \"Indian\",\r\n    \"stars\": 1,\r\n    \"map\": \"https://goo.gl/maps/MCqxKiApEQS2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{COM_API_CACHEO_GRAPHQL_HOST}}/api/restaurant/62d17f8cc579571536e74a1f",
+							"host": [
+								"{{COM_API_CACHEO_GRAPHQL_HOST}}"
+							],
+							"path": [
+								"api",
+								"restaurant",
+								"62d17f8cc579571536e74a1f"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "{{COM_API_CACHEO_GRAPHQL_HOST}}/api/restaurant/62d17f8cc579571536e74a1f",
-					"host": [
-						"{{COM_API_CACHEO_GRAPHQL_HOST}}"
-					],
-					"path": [
-						"api",
-						"restaurant",
-						"62d17f8cc579571536e74a1f"
-					]
+				{
+					"name": "Consultar CrediCard por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{COM_API_CACHEO_GRAPHQL_HOST}}/api/crediCard/818770008",
+							"host": [
+								"{{COM_API_CACHEO_GRAPHQL_HOST}}"
+							],
+							"path": [
+								"api",
+								"crediCard",
+								"818770008"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar CrediCard por ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{COM_API_CACHEO_GRAPHQL_HOST}}/api/restaurant/62d17f8cc579571536e74a1f",
+							"host": [
+								"{{COM_API_CACHEO_GRAPHQL_HOST}}"
+							],
+							"path": [
+								"api",
+								"restaurant",
+								"62d17f8cc579571536e74a1f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar CrediCard",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{COM_API_CACHEO_GRAPHQL_HOST}}/api/crediCard",
+							"host": [
+								"{{COM_API_CACHEO_GRAPHQL_HOST}}"
+							],
+							"path": [
+								"api",
+								"crediCard"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
-		},
-		{
-			"name": "Consultar Restaurante por ID",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{COM_API_CACHEO_GRAPHQL_HOST}}/api/restaurant/62d17f8cc579571536e74a1f",
-					"host": [
-						"{{COM_API_CACHEO_GRAPHQL_HOST}}"
-					],
-					"path": [
-						"api",
-						"restaurant",
-						"62d17f8cc579571536e74a1f"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Eliminar Restaurante por ID",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "{{COM_API_CACHEO_GRAPHQL_HOST}}/api/restaurant/62d17f8cc579571536e74a1f",
-					"host": [
-						"{{COM_API_CACHEO_GRAPHQL_HOST}}"
-					],
-					"path": [
-						"api",
-						"restaurant",
-						"62d17f8cc579571536e74a1f"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Consultar Restaurantes",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{COM_API_CACHEO_GRAPHQL_HOST}}/api/restaurant",
-					"host": [
-						"{{COM_API_CACHEO_GRAPHQL_HOST}}"
-					],
-					"path": [
-						"api",
-						"restaurant"
-					]
-				}
-			},
-			"response": []
+			]
 		}
 	]
 }
