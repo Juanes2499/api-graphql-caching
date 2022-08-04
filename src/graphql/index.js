@@ -2,12 +2,12 @@
 const express = require('express');
 const routes = express();
 const {graphqlHTTP}  = require('express-graphql');
-const restaurantResolver = require('./resolvers/restaurant.resolver');
-const restauarantSchema = require('./schemas/restaurant.schema');
+const crediCardResolver = require('./resolvers/crediCard.resolver');
+const crediCardSchema = require('./schemas/crediCard.schema');
 
 routes.use('', graphqlHTTP ({
-    schema: restauarantSchema,
-    rootValue: restaurantResolver,
+    schema: crediCardSchema,
+    rootValue: crediCardResolver,
     graphiql: true
 }));
 
