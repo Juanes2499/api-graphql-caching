@@ -1,0 +1,7 @@
+.github
+.vscode
+data
+docker
+node_modules
+postman
+.gitignore
