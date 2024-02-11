@@ -3,7 +3,6 @@ name: Build and Push Docker image to Docker Hub
 on:
   release:
     types: [published]
-    branches: [ "master" ]
 
 jobs:
   push_to_registry:
@@ -20,9 +19,10 @@ jobs:
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
 
       - name: Get tag name
-        id: get_tag_name
-        run: echo "Tag name: ${{ github.event.release.tag_name }}"
-        run: echo "Ref: ${{ github.ref }}"
+        run: echo "Tag  ${{ github.event.release.tag_name }}"
+
+      - name: Get ref namme
+        run: echo "Ref ${{ github.ref }}"
 
       # - name: Build and push Docker image
       #   uses: docker/build-push-action@v4
