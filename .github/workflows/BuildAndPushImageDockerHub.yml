@@ -5,28 +5,29 @@ on:
     types: [published]
 
 jobs:
-  push_to_registry:
-    name: Push Docker image to Docker Hub
+  check_out_repository:
+    name: Check out repositry
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
         uses: actions/checkout@v3
 
+  push_and_build:
+    name: Push and build
+    runs-on: ubuntu-latest
+    steps:
       - name: Login to Docker Hub
         uses: docker/login-action@v2
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
 
-      - name: Get tag name
-        run: echo "Tag  ${{ github.event.release.tag_name }}"
+      - name: Get tag number
+        run: echo "Tag number - ${{ github.event.release.tag_name }}"
 
-      - name: Get ref namme
-        run: echo "Ref ${{ github.ref }}"
-
-      # - name: Build and push Docker image
-      #   uses: docker/build-push-action@v4
-      #   with:
-      #     context: .
-      #     push: true
-      #     tags: "juanes2499/api-graphql-caching:${{ github.event.release.tag_name }}"
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          push: true
+          tags: juanes2499/api-graphql-caching:${{ github.event.release.tag_name }}
